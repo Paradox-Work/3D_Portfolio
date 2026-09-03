@@ -1,16 +1,50 @@
-
+import * as THREE from 'three';
 
 const HeroLights = () => {
   return (
      <>
 
      <spotLight 
-        position={[3, 4, -3]} 
-        angle={0.5}
+        position={[2, 6, 5]} 
+        angle={0.15}
         intensity={100}
         penumbra={0.3}
         color={"#ffffff"}
      />
+
+     <spotLight 
+        position={[4, 5, 4]} 
+        angle={0.3}
+        intensity={40}
+        penumbra={0.5}
+        color="#4cc9f0"
+     />
+     <spotLight 
+        position={[-3, 4, 5]} 
+        angle={0.4}
+        intensity={60}
+        penumbra={1}
+        color="#9d4edd"
+     />
+
+     <primitive
+        object={new THREE.RectAreaLight('#A259FF', 8, 3, 2)}
+        position={[0, 1, 0]}
+        intensity={8}
+        rotation={[Math.PI / -2, Math.PI / 8, 0]}
+     />
+
+    <pointLight
+        position={[0, 1, 0]}
+        intensity={15}
+        color="#7209b7"
+    />
+    
+    <pointLight
+        position={[1, 1, -2]}
+        intensity={17}
+        color="#0d00a4"
+    />
 
      </>
   )
